@@ -12,7 +12,7 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Juan";
   apellido = "Diaz";
   edad = 20;
-  //empresa = "Microsoft"; 
+  empresa = "Google"; 
 
   // NombreEmpresa(value:String){}
 
@@ -37,6 +37,12 @@ export class EmpleadoComponent implements OnInit {
       this.textoDeRegistro = "No hay personas Registradas";
     }
   }
+
+  // cambiaEmpresa(event:Event){
+  //   this.empresa=(<HTMLInputElement>event.target).value;
+  // }
+
+
 
   constructor() { }
 

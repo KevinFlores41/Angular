@@ -4,9 +4,12 @@
 
 <p>Edad del empleado: {{edad<18 ? "Menor de edad" : "Mayor de edad"}}</p>
 
-<p>Nombre de la empresa: {{empresa.value}}</p>
+<p>Nombre de la empresa: {{empresa}}</p>
 
-Introduce el nombre de la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitarinput">
+<!-- Introduce el nombre de la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitarinput"> -->
+
+<!-- Introduce el nombre de la empresa: <input type="text" (input)="cambiaEmpresa($event)" /> -->
+Introduce el nombre de la empresa: <input type="text" [(ngModel)] = "empresa" />
 <br/><br/>
 
 {{textoDeRegistro}}
