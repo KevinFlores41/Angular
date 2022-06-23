@@ -1,0 +1,26 @@
+<div class="d-grip gap mt4">
+    <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+</div>
+
+<table class="table table-hover-table-striped">
+    <thead class="bg dark text-white">
+        <tr style="color: black;">
+            <th>Personaje</th>
+            <th>Descripción</th>
+            <th>Referencia</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let post of Posts">
+            <td>{{post.title}}</td>
+            <td>{{post.content}}</td>
+            <td>{{post.author}}</td>
+            <td>
+                <button routerLink="/edit/{{post.id}}"><i class="fa-solid fa-pen"></i></button>
+                <button (click)="deleteRecord(post)"><i class="fa-solid fa-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
